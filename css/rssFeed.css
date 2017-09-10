@@ -1,0 +1,239 @@
+/* This adds the ability to utilize Google WebFonts in your FeedWind widget */
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+
+
+/* This is the styling for the header container*/
+#header {
+text-align: center;
+ color: #fff;
+ font-size: 18px;
+ background-color: transparent;
+}
+
+a.fw-feed-item-url {
+ text-decoration: none;
+}
+
+.fw-feed-item { 
+ display:block;
+ }
+
+/* This is the styling for the main Feed Title in the header container*/
+.fw-feed-title {
+ margin: 0 auto;
+ font-weight: bold;
+ word-wrap: break-word;
+ text-align: center;
+ text-shadow: 2px 1px 0px #000080;
+ display:block;
+}
+
+/* This is the styling for the Feed Title link in the header container*/
+.fw-feed-title a:link {
+ color: #fef;
+ text-decoration: none;
+}
+
+/* This is the styling for a "visited" Feed Title link in the header container*/
+.fw-feed-title a:visited {
+ color: #ddd;
+ text-decoration: none;
+}
+
+/* This is the styling for a Feed Title link on "mouseover" (also known as "hover") in the header container*/
+.fw-feed-title a:hover {
+ color: #fff;
+ text-decoration: none;
+}
+
+/* This is the styling for an "active" Feed Title link in the header container*/
+.fw-feed-title a:active {
+ color: #fff;
+ text-decoration: none;
+}
+
+/* This is the styling for the feed body (i.e all Feed Items) container. */
+/* WARNING: be careful adding Left or Right Padding as you can lose the scrollbar when the L/R padding is set to more than 8px; the scrollwheel on a mouse still works however, but the scrollbar can disappear after 8px of padding either side. Use Margins instead add space around the content container.*/
+ 
+
+/* This is the styling for the Feed Item content in the body container*/
+.fw-feed-item-content-module {
+ background-color: transparent;
+}
+
+/* This is the styling for the Feed Item Title in the body container*/
+.fw-feed-item-title {
+ display:block; 
+  text-align: center;
+   color: #ecf0f1;
+
+}
+
+/* This is the styling for an "unvisited/unclicked" Feed Item Title link in the body container*/
+.fw-feed-item-title a:link{
+ margin: 20px 0 10px 0px!important;
+ color: #ecf0f1;
+ text-decoration: none;
+ font-size: 16px;
+}
+
+/* This is the styling for a "visited/clicked" Feed Item Title link in the body container*/
+.fw-feed-item-title a:visited{
+ color: #39f;
+ padding: 20px 0 0 0;
+ text-decoration: none;
+}
+
+/* This is the styling for a Feed Item Title link on "mouseover" (also known as "hover") in the body container*/
+.fw-feed-item-title a:hover{
+ color: #39c;
+ text-decoration: none;
+ padding: 20px 0 0 0;
+}
+
+/* This is the styling for an active Feed Item Title link in the body container*/
+.fw-feed-item-title a:active{
+ color: #09f;
+ text-decoration: none;
+ padding: 20px 0 0 0;
+}
+
+/* This is the styling affecting a Feed Item Date for a feed item in the body container*/
+.fw-feed-item-date {
+ display:block;
+ margin: 0 20px 0 3px;
+ padding: 0 2px 0 3px;
+ color: #999;
+ font-size: 10px;
+ text-align: right;
+}
+
+/* This is the styling affecting a Feed Item Description, Thumbnail or Video Player link for a feed item in the body container*/
+.fw-feed-item-link {
+ margin: 0 0 0 3px;
+ padding: 0 2px 0 3px;
+ color: red;
+ text-decoration:none;
+ }
+/* This is the styling affecting an "unvisited/unclicked" Feed Item anchor for a feed item in the body container*/
+.fw-feed-item-link a{
+ color: #123456;
+ text-decoration: none;
+}
+
+/* This is the styling affecting an "unvisited/unclicked" Feed Item Link anchor for a feed item in the body container*/
+.fw-feed-item-link a:link{
+ color: #666666;
+ text-decoration: none;
+}
+
+/* This is the styling affecting an "visited/clicked" Feed Item Link anchor for a feed item in the body container*/
+.fw-feed-item-link a:visited{
+ color: #666666;
+ text-decoration: none;
+}
+
+/* This is the styling for a Feed Item Title Link Anchor on "mouseover" (also known as "hover") for a feed item in the body container*/
+.fw-feed-item-link a:hover{
+ color: #666666;
+ text-decoration: none;
+}
+
+/* This is the styling affecting an "active" Feed Item Link anchor for a feed item in the body container*/
+.fw-feed-item-link a:active{
+ color: #666666;
+ text-decoration: none;
+}
+
+/* This is the styling for the Description in a Feed Item (i.e. the text of a Feed Item in Thumbnail mode, or text+images in Full HTML mode)*/
+.fw-feed-item-description {
+ font-size: 12px;
+ text-align: center;
+ margin: 10px;
+ color: #666;
+ font-weight: 300;
+ word-wrap: break-word;
+ text-decoration:none;
+ display:block;
+}
+
+/* This is the styling for a Feed Item Thumbnail - Thumbnail size and layout/orientation can be set here. This does not affect a YouTube video thumbnail.*/
+.fw-feed-item-image {
+ width: 150px;
+ height: 120px;
+ float: left;
+ text-align: left;
+ margin: 20px 20px 10px 10px;
+}
+
+.fw-feed-item-image-module {
+ margin: 20px 20px 20px 20px;
+}
+
+
+#fw-container {
+ text-align: left;
+ font-family: 'Noto Sans', Helvetica, sans-serif;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+
+  border: 0px;
+  height:auto !important; 
+} 
+
+
+/* This is the styling for the header container*/
+#header {
+ margin: 10px 20px 10px 20px;
+ color: #fff;
+ font-size: 18px;
+ background-color: transparent;
+ background-repeat: repeat-x;
+}
+
+a.fw-feed-item-url {
+ text-decoration: none;
+}
+
+.fw-feed-item {
+ display:block;
+  border: 0px;
+ }
+
+/* This is the styling for the main Feed Title in the header container*/
+.fw-feed-title {
+ margin: 10px 20px 10px 20px;
+ font-weight: bold;
+ word-wrap: break-word;
+ text-align: center;
+ text-shadow: 2px 1px 0px #000080;
+ display:block;
+}
+#fw-feed-items-scroll-area {
+ background-color: transparent;
+  border: 0px;
+}
+.fw-branding {
+  height: 0px !important;
+  width: 0px !important;
+  display: none !important;
+  visibility: hidden !important;
+  font-size: 0px !important;
+  color: transparent !important;
+} 
+.fw-branding a img {
+  height: 0px !important;
+  width: 0px !important;
+  display: none !important;
+  visibility: hidden !important;
+  font-size: 0px !important;
+  color: transparent !important;
+} 
+
+
+/* These control the scrollbar and scrollbar background colors */
+/* NOTE: the ! important tag is used here to override any other CSS controlling the scrollbar appearance */
+/* .jspTrack{background: #aec5e8 !important;} */

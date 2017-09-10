@@ -1,0 +1,2798 @@
+html, body {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#theGodlyBody {
+  -webkit-transition: background-image 1s linear;
+  -moz-transition: background-image 1s linear;
+  -ms-transition: background-image 1s linear;
+  transition: background-image 1s linear;
+  background-color: black; 
+}
+ 
+/* DEFAULT COLORS FOR CUSTOMIZABLE ELEMENTS */
+
+.todoTodayWrap {  
+    border-left: 4px solid #378237; 
+    border-top: 4px solid #378237;
+}  
+.today-todo:hover {
+    border-bottom: 5px solid #378237;
+}
+input[id='rb1']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;  
+  height: 100%;  
+  background: #378237;
+}
+input[id='rb2']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #378237;
+}
+
+input[id='rb-event-1']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #378237;
+}
+input[id='rb-event-2']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #378237;
+}
+input[id='rb-event-3']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #378237;
+}
+input[id='rb-event-4']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #378237;
+}
+input[id='rb-event-5']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #378237;
+}
+input[id='rb-event-6']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #378237;
+}
+input[id='rb-event-7']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #378237;
+}
+label#myRadioLabel::before {
+  content: " ";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #378237;
+  border-radius: 4px;
+  z-index: -1;
+}
+#event-weeklyEvent:hover {
+    border: 2px solid #378237;
+    cursor: pointer;
+}
+#event-weeklyEvent:active, #event-weeklyEvent:visited{
+    border: 2px solid #378237;
+    cursor: pointer;
+}
+#event-specificEvent:hover {
+    border: 2px solid #378237;
+    cursor: pointer;
+}
+p#viewAllEventTxt {
+    border: 2px solid #378237;
+}
+input.create-todo-input{
+    border: 1px solid #378237;
+
+}
+input.create-todo-input{
+    border: 1px solid #378237;
+
+}
+input.create-todo-input:focus {
+    border-left: 4px solid #378237;
+}
+div#event-weeklyEvent.selectedEventBox {
+    background-color: #378237;
+    border: #378237;
+    color: white;
+}
+div#event-specificEvent.selectedEventBox {
+    background-color: #378237;
+    border: #378237;
+    color: white;
+}
+div#event-specificEvent1.selectedEventBox {
+    background-color: #378237;
+    border: #378237;
+    color: white;
+}
+div#event-weeklyEvent1.selectedEventBox {
+    background-color: #378237;
+    border: #378237;
+    color: white;
+}
+#numEvents {
+    background-color: #378237;
+}
+p#viewAllEventTxt:hover {
+    background-color: #378237;
+    color: white;
+}
+
+
+.notification {
+    background-color: #378237;
+}
+.upcomingEvents .date {
+  border-bottom: 3px solid #378237;
+}
+.weekDay .day {
+  border-bottom: 3px solid  #378237;
+}
+.upcomingWeekly::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #378237;
+}
+form#signOutF {
+  border-top: 2px solid #378237;
+  cursor: pointer;
+}
+form#signOutF:hover {
+  background-color: #378237;
+  border-radius: 6px;
+}
+/* END CUSTOMIZABLE COLORS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px)
+{
+    #DesktopLayout
+    {
+        display: none;
+    }
+}
+@media (min-width: 768px)
+{
+    #MobileLayout
+    {
+        display: none;
+    }
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+.color-picker {
+  width: 100%;
+
+  padding: 40px 0;
+}
+
+.base-colors,
+.varied-colors {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.color,
+.color-var {
+  float: left;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  width: 25px;
+  height: 25px;
+  margin: 20px;
+}
+.color.active {
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3);
+}
+
+.color-var {
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+.color-var.visible {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+.color-var.active {
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+.owen-mainbar {
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	border-bottom: 3px solid black;
+	background-color: white;
+	padding:10px 0px;
+	font-weight: bold;
+}
+.homeitem1 {
+	height: 30px;
+	background-color: red;
+	  transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  margin:0 auto;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  overflow: hidden;
+}
+.homeitem2 {
+	height: 30px;
+	background-color: blue;
+		  transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+    margin:0 auto;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  overflow: hidden;
+}
+.homeitem3 {
+	height: 30px;
+	background-color: green;
+		  transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+    margin:0 auto;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+    overflow: hidden;
+}
+.homeitem4 {
+	height: 30px;
+	background-color: orange;
+		  transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+    margin:0 auto;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+    overflow: hidden;
+}
+.homeitem5 {
+	height: 30px;
+	background-color: purple;
+		  transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+    margin:0 auto;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+    overflow: hidden;
+}
+.homeitem6 {
+	height: 30px;
+	background-color: yellow;
+		  transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+    margin:0 auto;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+    overflow: hidden;
+}
+.homeitem1:hover{
+	height: 50px;
+	background-color: red;
+}
+.homeitem2:hover {
+	height: 50px;
+	background-color: blue;
+}
+.homeitem3:hover {
+	height: 50px;
+	background-color: green;
+}
+.homeitem4:hover {
+	height: 50px;
+	background-color: orange;
+}
+.homeitem5:hover {
+	height: 50px;
+	background-color: purple;
+}
+.homeitem6:hover {
+	height: 50px;
+	background-color: yellow;
+}
+.homeitem1:focus {
+	height:500px;
+}
+.homeitem2:focus {
+	height:500px;
+
+}
+.homeitem3:focus {
+	height:500px;
+}
+.homeitem4:focus {
+	height:500px;
+}
+.homeitem5:focus {
+	height:500px;
+}
+.homeitem6:focus {
+	height:500px;	width:100%;
+}
+.homeitem-subitem {
+	border-top: 2px solid white;
+	padding: 15px 0px;
+	transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+}
+.homeitem-subitem:hover {
+	font-size:30px;
+	font-weight: bold;
+	background-color: white;
+}
+.homeitem-subitem a {
+	text-decoration: none;
+	color:black;
+}
+
+.headerBar {
+
+    font-weight: bold;
+    color: white;
+
+    padding: 10px 10px;
+    padding-bottom: 5px;
+
+}
+#clockbox {
+  display: inline;
+    font-size: 3vw;
+    color: white;
+    font-weight: bold; 
+ 
+    text-shadow: 4px 3px 1px rgba(0,0,0,0.3);
+
+} 
+#txt { 
+  display: inline;
+  text-align: center;
+    font-size: 3vw;
+    color: white; 
+    font-weight: bold;
+    margin-top: 0px;
+    padding-top: 0px;
+    text-shadow: 4px 3px 1px rgba(0,0,0,0.3);
+
+}
+p#userGreetingTxt {
+    font-size: 2.5vw; 
+    color: white;
+    font-weight:500;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.owen-homedash {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 45px;
+    height: 100%;
+}
+
+.b-head {
+padding:50px;
+height:auto;
+width:100%;
+margin:0 auto;
+text-align:center;
+background-color:#446789;
+color:white;
+}
+.color-picker {
+  width: 100%;
+  background-color: white;
+  padding: 40px 0;
+}
+#color-picker5 {
+  display: none;
+}
+.base-colors,
+.varied-colors {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.color,
+.color-var {
+  float: left;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  width: 25px;
+  height: 25px;
+  margin: 20px;
+}
+.color.active {
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3);
+}
+
+.color-var {
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+.color-var.visible {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+.color-var.active {
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3);
+}
+.change-color {
+  position: fixed;
+  top: 10px;
+  left: 30px;
+  padding: 15px;
+  background-color: #34495e;
+  color: #ecf0f1;
+  width: auto;
+  height: auto;
+}
+.change-color-back {
+  position: fixed;
+  top: 200px;
+  right: 30px;
+  padding: 15px;
+  background-color: #34495e;
+  color: #ecf0f1;
+  width: auto;
+  height: auto;
+  display: none;
+}
+.homedash-circlemenu {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 10px;
+
+
+}
+
+
+p#circlemenu-signin {
+    padding-top: 35%;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+.signin-displaybox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    margin: 0 auto;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 7px;
+    height: 100%;
+    opacity: 0.9;
+    text-align: center;
+    padding-top: 10%;
+}
+.defBtn {
+ padding: 8px 15px;
+  background-color: #378237;
+  display: inline;
+  text-align: center;
+  border: 0px; 
+  box-shadow: 0px;
+  border-radius: 4px;
+  border: 2px solid white;
+  color: white;
+  font-size: 14px;
+  opacity: 1;
+  font-weight: bold;
+  margin: 0 auto;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+.defBtn:hover{
+border: 3px solid white;
+}
+input.signin-field {
+    border: 0px;
+    text-decoration: none;
+    box-shadow: none;
+    outline: none;
+    padding: 10px;
+    margin: 5px;
+    font-size: 35px;
+    border-left: 2px solid #40963D;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+input.signin-field:focus {
+    border: 0px;
+    text-decoration: none;
+    box-shadow: none;
+    outline: none;
+    border-left: 9px solid #40963D;
+}
+input.signup-field {
+    border: 0px;
+    text-decoration: none;
+    box-shadow: none;
+    outline: none;
+    padding: 10px;
+    margin: 5px;
+    font-size: 35px;
+    border-left: 2px solid #40963D;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+input.signup-field:focus {
+    border: 0px;
+    text-decoration: none;
+    box-shadow: none;
+    outline: none;
+    border-left: 9px solid #40963D;
+}
+#signin-close {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    font-size: 40px;
+}
+#signin-close {
+    cursor: pointer;
+}
+form#signup-form {
+    display: none;
+}
+.signout {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    color: white;
+    font-size: 1em;
+    z-index: 999;
+}
+#mydash-signout {
+    border: 0px;
+    text-decoration: none;
+    background-color:transparent;
+    color: black;
+  width: 100%;
+}
+
+p#todo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    font-weight: lighter;
+    color: #fff;
+    background-color:rgba(77, 77, 77, 0.7);
+    width: auto;
+    border-radius: 3px;
+    padding: 4px;
+}
+#todocontent {
+  width: 150px;
+}
+p#socialmedia-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    font-weight: lighter;
+    color: #fff;
+    background-color:rgba(77, 77, 77, 0.7);
+    width: auto;
+    border-radius: 3px;
+    padding: 4px;
+}
+p#weeklyschedule-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin: 0 auto;
+    font-weight: lighter;
+    color: #fff;
+    background-color:rgba(77, 77, 77, 0.7);
+    width: 200px;
+    border-radius: 3px;
+    padding: 4px;
+}
+p#weeklyschedule-text:hover {
+    cursor: pointer;
+}
+p#todaysEvents-text {
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Work Sans', sans-serif;
+    margin-left: 10px;
+    font-weight: 100;
+    color: #fff;
+}
+p#todaysEvents-subtext {
+    font-size: 1.3em;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 100;
+    color: #fff;
+    text-shadow: 0 2px 0 0px hsl(330, 100%, 25%),
+                 0 3px 2px 0px hsla(330, 100%, 15%, 0.5);
+}
+input.create-todo-input{
+    outline: none;
+    box-shadow: 0px;
+    text-decoration: none;
+    font-size: 19px;
+    padding: 10px;
+    opacity: 0.8;
+    font-size: 19px;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    background-color: #F0F0F0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+input.create-todo-input:focus {
+    outline: none;
+    box-shadow: 0px;
+    text-decoration: none;
+    padding: 10px;
+}
+input.create-newsite-input{
+    outline: none;
+    box-shadow: 0px;
+    text-decoration: none;
+    font-size: 19px;
+    padding: 10px;
+    opacity: 0.8;
+    font-size: 19px;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    background-color: #F0F0F0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #378237;
+}
+
+input.create-newsite-input:focus {
+    outline: none;
+    box-shadow: 0px;
+    text-decoration: none;
+    padding: 10px;
+    border-left: 4px solid #378237;
+}
+input.submit-todo-input {
+    border: 0px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px;
+    font-weight: bold;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+button.submit-todo-input:hover {
+    border: 3px solid #000;
+}
+.today-todo {
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    font-size: 1.1em;
+    padding: 1px 5px;
+    padding-top: 8px;
+    background-color: #fff;
+    margin: 10px 0px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding-left: 15px;
+}
+.today-todo:hover {
+    border-bottom: 5px solid #27ae60;
+}
+
+p#registerbut {
+    cursor: pointer;
+    border: 2px solid #353536;
+    background-color: #353536;
+    border-radius: 3px;
+    padding: 6px 0px;
+    color: white;
+}
+#site-title {
+  color: white;
+font-family: 'Alegreya Sans SC', sans-serif;
+font-weight: 800;
+font-size: 40px;
+}
+p#signinbut {
+  cursor: pointer;
+  border: 2px solid #353536;
+    background-color: #353536;
+  border-radius: 3px;
+  padding: 6px 0px;
+  color: white;
+}
+#del-todo {
+    border: 0px;
+    background-color: transparent;
+    float: right;
+}
+#delEvent {
+  border: 0px;
+  background-color: transparent;
+  display:inline;
+  font-size: 14px;
+}
+ul#todosul {
+    padding-left: 5px;
+}
+ul#todosul li {
+    display: inline;
+    padding: 0px;
+}
+ul#todosul1 {
+    padding-left: 5px;
+}
+ul#todosul1 li {
+    display: inline;
+    padding: 0px;
+}
+#increment-tracker {
+    border: 0px;
+    background-color: transparent;
+}
+ul#headdash-ul li {
+    display: inline;
+    font-size: 24px;
+}
+#headdash-myhome {
+    padding-top: 25%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+
+}
+#headdash-mysites {
+    padding-top: 25%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+#headdash-myhome:hover {
+    box-shadow: 2px;
+}
+.mobilemenu {
+    margin: 15px 0px;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid #34495e;
+    border-radius: 6px;
+}
+#headdash-myhomep {
+    font-size: 25px;
+}
+#headdash-mysitesp {
+    font-size: 25px;
+}
+
+#headdash-myhomep:hover {
+    cursor: pointer;
+}
+#headdash-mysitesp:hover {
+    cursor: pointer;
+}
+#add-mySites {
+    font-size: 30px;
+}
+#mydash-sites {
+
+    margin: 20px 10px;
+}
+
+.sites-add .addsites-options::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+
+}
+.sites-add .addsites-options {
+    visibility: hidden;
+    width: 160px;
+    background-color: #fff;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: -150%;
+    left: 500%;
+    margin-left: -80px;
+}
+.sites-add {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.sites-add .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+#addSiteCat:hover {
+    background-color: white;
+    color: black;
+}
+#addSite:hover {
+    background-color: white;
+    color: black;
+}
+.rotate{
+    -moz-transition: all 1.5s linear;
+    -webkit-transition: all 1.5s linear;
+    transition: all 1.5s linear;
+}
+.paintrotate{
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
+.paintrotate.up {
+    -moz-transform:rotate(50deg);
+    -webkit-transform:rotate(50deg);
+    transform:rotate(50deg);
+}
+
+.rotate.down{
+    -moz-transform:rotate(135deg);
+    -webkit-transform:rotate(135deg);
+    transform:rotate(135deg);
+}
+#categoryicon {
+    background-color: transparent;
+    border: none;
+    font-size: 55px;
+}
+#createNewCategory input[type="checkbox"] {
+    display: none;
+}
+#createNewCategory label:before {
+ font-family: "FontAwesome";
+  font-style: normal;
+  width: 1em;
+  height: 1em;
+  margin-right: .3em;
+}
+
+#createNewCategory input[id="categoryicon1"]:checked ~ label[id="icon1"]:before {
+    color: red;
+}
+#createNewCategory input[id="categoryicon2"]:checked ~ label[id="icon2"]:before {
+    color: red;
+}
+#createNewCategory input[id="categoryicon3"]:checked ~ label[id="icon3"]:before {
+    color: red;
+}
+#createNewCategory input[id="categoryicon4"]:checked ~ label[id="icon4"]:before {
+    color: red;
+}
+#createNewCategory input[id="categoryicon5"]:checked ~ label[id="icon5"]:before {
+    color: red;
+}
+#createNewCategory input[id="categoryicon7"]:checked ~ label[id="icon7"]:before {
+    color: red;
+}
+#createNewCategory input[id="categoryicon8"]:checked ~ label[id="icon8"]:before {
+    color: red;
+}
+#createNewCategory input[id="categoryicon9"]:checked ~ label[id="icon9"]:before {
+    color: red;
+}
+#createNewCategory input[id="categoryicon6"]:checked ~ label[id="icon6"]:before {
+    color: red;
+}
+
+
+
+
+#icon1:before {
+   font-size: 55px;
+   content: '\f012';
+}
+#icon2:before {
+   font-size: 55px;
+   content: '\f209';
+}
+#icon3:before {
+   font-size: 55px;
+   content: '\f1d8';
+}
+#icon4:before {
+   font-size: 55px;
+   content: '\f13d';
+}
+#icon5:before {
+   font-size: 55px;
+   content: '\f016';
+}
+#icon6:before {
+   font-size: 55px;
+   content: '\f0d6';
+}
+#icon7:before {
+   font-size: 55px;
+   content: '\f040';
+}
+#icon8:before {
+   font-size: 55px;
+   content: '\f0c7';
+}
+#icon9:before {
+   font-size: 55px;
+   content: '\f007';
+}
+
+#iconwrapper {
+    margin: 30px 0px;
+
+}
+#createNewCategory {
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+    padding: 40px 0px;
+}
+.categoryname input {
+    padding: 5px;
+    font-size: 30px;
+}
+.mycategories {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding: 40px 0px;
+    display: table;
+}
+.mycategory {
+    font-size: 40px;
+}
+#iconwrapper {
+    padding-top: 40px;
+}
+.addCategory {
+    padding: 10px;
+    margin: 5px;
+    border: 0px;
+    background-color: white;
+    font-size: 16px;
+}
+#createNewSite {
+    display: none;
+    overflow: auto;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0px;
+}
+#newSiteCatIconSelect:before {
+   font-size: 55px;
+   content: '\f007';
+}
+.newSiteInput {
+    padding: 5px;
+    font-size: 30px;
+}
+#createNewSite input[id="selectSiteCat"]:checked ~ label[id="icon6"]:before {
+    color: red;
+}
+.pickSiteCategory {
+    visibility: hidden;
+}
+#catid.tohighlight {
+    color: red;
+}
+#viewCategorySites {
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+}
+.currentCategory {
+    text-align: center;
+    background-color: transparent;
+    position: relative;
+    top: 100%;
+    left: 0;
+    display: inline-block;
+}
+
+.mysite {
+    margin-top: 30px;
+    text-align: center;
+    marin: 0 auto;
+}
+p#mysite-name {
+    font-size: 30px;
+}
+ul#currentCatBread li {
+    display: inline;
+    font-size: 20px;
+    font-family: Open Sans;
+}
+ul#currentCatBread li#createNewCatBread {
+    display: none;
+}
+ul#currentCatBread li#createNewSiteBread {
+    display: none;
+}
+ul#currentCatBread li a{
+    color: black;
+}
+ul#currentCatBread li a:hover{
+    color: black;
+    text-decoration: none;
+    border: 0px;
+}
+.selectSiteCatWrapper {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+    display: table;
+}
+#createNewSite {
+    padding: 40px 0px;
+}
+#enterSite {
+    border: 0px;
+    background-color: transparent;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 25px;
+}
+.welcomeandsignin {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 33px;
+
+}
+.mydash-body {
+    position: relative;
+}
+.nopad {
+    padding: 0px;
+}
+
+
+#socialicon1 {
+    display: none;
+}
+#socialicon2 {
+    display: none;
+}
+#socialicon3 {
+    display: none;
+}
+#socialicon4 {
+    display: none;
+}
+#socialicon5 {
+    display: none;
+}
+#socialicon6 {
+    display: none;
+}
+#socialicon7 {
+    display: none;
+}
+#socialicon8 {
+    display: none;
+}
+#socialicon9 {
+    display: none;
+}
+#socialicon10 {
+    display: none;
+}
+#socialicon11 {
+    display: none;
+}
+#socialicon12 {
+    display: none;
+}
+
+ul#socialicons li {
+    display: inline;
+    margin: 10px 20px;
+    font-size: 35px;
+}
+#addSocialMediaAcc input[id="socialicon1"]:checked ~ label[id="social1"]:before {
+    color: #c0392b;
+}
+
+#addSocialMediaAcc input[id="socialicon2"]:checked ~ label[id="social2"]:before {
+    color: #c0392b;
+}
+#addSocialMediaAcc input[id="socialicon3"]:checked ~ label[id="social3"]:before {
+    color: #c0392b;
+}
+#addSocialMediaAcc input[id="socialicon4"]:checked ~ label[id="social4"]:before {
+    color: #c0392b;
+}
+#addSocialMediaAcc input[id="socialicon5"]:checked ~ label[id="social5"]:before {
+    color: #c0392b;
+}
+#addSocialMediaAcc input[id="socialicon6"]:checked ~ label[id="social6"]:before {
+    color: #c0392b;
+}
+#addSocialMediaAcc input[id="socialicon7"]:checked ~ label[id="social7"]:before {
+    color: #c0392b;
+}
+#addSocialMediaAcc input[id="socialicon8"]:checked ~ label[id="social8"]:before {
+    color: #c0392b;
+}
+#addSocialMediaAcc input[id="socialicon9"]:checked ~ label[id="social9"]:before {
+    color: #c0392b;
+}
+#addSocialMediaAcc input[id="socialicon10"]:checked ~ label[id="social10"]:before {
+    color: #c0392b;
+}
+#addSocialMediaAcc input[id="socialicon11"]:checked ~ label[id="social11"]:before {
+    color: #c0392b;
+}
+#addSocialMediaAcc input[id="socialicon12"]:checked ~ label[id="social12"]:before {
+    color: #c0392b;
+}
+#addSocialMediaAcc input[id="socialicon13"]:checked ~ label[id="social13"]:before {
+    color: #c0392b;
+}
+
+#mySocialSites {
+    font-size: 2.5em;
+    margin: 10px 0px;
+    padding: 15px 15px;
+    background-color: #fff;
+    display: table;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    float: right;
+}
+#myFavSites {
+    font-size: 2.5em;
+    margin: 10px 0px;
+    margin-top: 0px;
+    padding: 15px 15px;
+    background-color: #fff;
+    display: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    float: right;
+    width: 200px;
+}
+#myFavSites .show{
+    font-size: 2.5em;
+    margin: 10px 0px;
+    margin-top: 0px;
+    padding: 15px 15px;
+    background-color: #fff;
+    display: table;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    float: right;
+    width: 200px;
+}
+#myFavSitesDel {
+    font-size: 2.5em;
+    margin: 10px 0px;
+    margin-top: 0px;
+    padding: 15px 15px;
+    background-color: #fff;
+    display: table;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    width: 200px;
+    float: right;
+    text-align: center;
+}
+
+.scheduleBox {
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+}
+p#weekdaymonTxt {
+    font-family: Asap;
+    font-size: 15px;
+}
+p#weekdaytueTxt {
+    font-family: Asap;
+    font-size: 15px;
+}
+p#weekdaywedTxt {
+    font-family: Asap;
+    font-size: 15px;
+}
+p#weekdaythuTxt {
+    font-family: Asap;
+    font-size: 15px;
+}
+p#weekdayfriTxt {
+    font-family: Asap;
+    font-size: 15px;
+}
+p#weekendTxt {
+    font-family: Asap;
+    font-size: 15px;
+}
+.day {
+    padding: 20px 0px;
+}
+ul#daylist {
+    margin: 25px 0px;
+}
+
+ul#daylisttitles {
+    margin-top: 20px;
+}
+ul#daylisttitles li{
+display: inline;
+}
+
+ul#daylisttimes{
+
+}
+ul#daylisttimes li{
+display: inline;
+}
+ul#daylist li {
+    display: inline;
+}
+
+
+
+/* Code For Pop-Up fade in, in absolute  posistion. A js function is also used to add the .popup class on click
+.lorum-All is parent container
+.createEventPopup is class of Popup. Then .show class is added to Popup with js by grabbing it by ID*/
+
+.todo-All .createEventPopup {
+    visibility: hidden;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: fixed;
+    width: 500px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
+    z-index: 1;
+    z-index: 1;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    color: #000;
+
+
+}
+.todo-All {
+
+    width: 200px;
+    padding: 10px;
+    height: auto;
+
+
+
+}
+.todo-All .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+
+/* Code For Pop-Up fade in, in absolute  posistion. A js function is also used to add the .popup class on click */
+.socialMedia-All .newSocialMedia {
+    visibility: hidden; 
+    visibility: hidden; 
+    background-color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
+    z-index: 1;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    color: #000;
+
+}
+.socialMedia-All {
+    position: relative;
+    float: right;
+    width: 220px;
+    padding: 10px;
+
+}
+.socialMedia-All .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+
+/* Code For Pop-Up fade in, in absolute  posistion. A js function is also used to add the .popup class on click */
+.weeklySchedule-All .newEvent {
+    visibility: hidden;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: fixed;
+    width: 500px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
+    z-index: 1;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    color: #000;
+
+}
+.weeklySchedule-All {
+    position: fixed;
+    text-align: center;
+    bottom:-216px;
+    left: 0px;
+    right: 0px;
+}
+div#weeklyScheduleWrap.weeklySchedule-All.showSchedule {
+    bottom: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.weeklySchedule-All .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+#numEvents {
+    background-color: #378237;
+    color: #ecf0f1;
+    font-weight: bold;
+    border-radius: 4px;
+    width: 80px;
+    margin: 0 auto;
+}
+#monSchedule {
+    display: none;
+}
+.todoTodayWrap {
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px 0px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 3px;
+    color: black;
+
+
+}
+.todoTodayWrap span#eventName {
+    font-weight: bold;
+    font-size: 1em;
+}
+.todoTodayWrap span#eventTime {
+    font-size: 1em;
+}
+p#socialSitesTxt {
+    font-size: 14px;
+    padding: 0px;
+        margin: 0 auto;
+font-family: 'Bitter', serif;
+}
+p#favSitesTxt {
+    font-size: 14px;
+    padding: 0px;
+    margin: 0 auto;
+    font-family: 'Bitter', serif;
+}
+
+.todaysEventsWrap {
+    position: fixed;
+    margin: 0 auto;
+    height: 200px;
+    left: 0;
+    right: 0;
+    width: 50%;
+    overflow: scroll;
+
+}
+.todaysEventsWrap::-webkit-scrollbar {
+    display: none;
+}
+
+input[id*="cor"] {
+    display: none;
+}
+input[id="cor1"]:checked ~ label[class="cor1"]:before {
+  content: '\f00c';
+  display: block;
+  position: absolute;
+  font-family: 'fontawesome';
+  top: 0px;
+  left: 1px;
+  font-size: 12px;
+  color: #000;
+    }
+input[id="cor1"]:checked ~ div[id="headBar"]:before {
+    background-color:#4986E7;
+}
+
+input[id="cor2"]:checked ~ label[class="cor2"]:before {
+  content: '\f00c';
+  display: block;
+  position: absolute;
+  font-family: 'fontawesome';
+  top: 0px;
+  left: 1px;
+  font-size: 12px;
+  color: #000;
+    }
+
+input[id="cor3"]:checked ~ label[class="cor3"]:before {
+  content: '\f00c';
+  display: block;
+  position: absolute;
+  font-family: 'fontawesome';
+  top: 0px;
+  left: 1px;
+  font-size: 12px;
+  color: #000;
+}
+
+input[id="cor4"]:checked ~ label[class="cor4"]:before {
+  content: '\f00c';
+  display: block;
+  position: absolute;
+  font-family: 'fontawesome';
+  top: 0px;
+  left: 1px;
+  font-size: 12px;
+  color: #000;
+}
+ input[id="cor5"]:checked ~ label[class="cor5"]:before {
+  content: '\f00c';
+  display: block;
+  position: absolute;
+  font-family: 'fontawesome';
+  top: 0px;
+  left: 1px;
+  font-size: 12px;
+  color: #000;
+}
+input[id="cor6"]:checked ~ label[class="cor6"]:before {
+  content: '\f00c';
+  display: block;
+  position: absolute;
+  font-family: 'fontawesome';
+  top: 0px;
+  left: 1px;
+  font-size: 12px;
+  color: #000;
+}
+input[id="cor7"]:checked ~ label[class="cor7"]:before {
+  content: '\f00c';
+  display: block;
+  position: absolute;
+  font-family: 'fontawesome';
+  top: 0px;
+  left: 1px;
+  font-size: 12px;
+  color: #000;
+}
+input[id="cor8"]:checked ~ label[class="cor8"]:before {
+  content: '\f00c';
+  display: block;
+  position: absolute;
+  font-family: 'fontawesome';
+  top: 0px;
+  left: 1px;
+  font-size: 12px;
+  color: #000;
+}
+input[id="cor9"]:checked ~ label[class="cor9"]:before {
+  content: '\f00c';
+  display: block;
+  position: absolute;
+  font-family: 'fontawesome';
+  top: 0px;
+  left: 1px;
+  font-size: 12px;
+  color: #000;
+}
+input[id="cor10"]:checked ~ label[class="cor10"]:before {
+  content: '\f00c';
+  display: block;
+  position: absolute;
+  font-family: 'fontawesome';
+  top: 0px;
+  left: 1px;
+  font-size: 12px;
+  color: #000;
+}
+input[id="cor12"]:checked ~ label[class="cor12"]:before {
+  content: '\f00c';
+  display: block;
+  position: absolute;
+  font-family: 'fontawesome';
+  top: 0px;
+  left: 1px;
+  font-size: 12px;
+  color: #000;
+}
+input[id="cor11"]:checked ~ label[class="cor11"]:before {
+  content: '\f00c';
+  display: block;
+  position: absolute;
+  font-family: 'fontawesome';
+  top: 0px;
+  left: 1px;
+  font-size: 12px;
+  color: #000;
+}
+
+
+
+
+.cor1 {
+  background-color: #4986E7;
+  border-color: #4986E7;
+      display: inline-block;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  margin-right: 5px;
+}
+.cor2 {
+  background-color: #5484ED;
+  border-color: #5484ED;
+      display: inline-block;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  margin-right: 5px;
+}
+.cor3 {
+  background-color: #A4BDFC;
+  border-color: #A4BDFC;
+      display: inline-block;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  margin-right: 5px;
+}
+.cor4 {
+  background-color: #46D6DB;
+  border-color: #46D6DB;
+      display: inline-block;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  margin-right: 5px;
+}
+.cor5 {
+  background-color: #7AE7BF;
+  border-color: #7AE7BF;
+      display: inline-block;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  margin-right: 5px;
+}
+.cor6 {
+  background-color: #51B749;
+  border-color: #51B749;
+      display: inline-block;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  margin-right: 5px;
+}
+.cor7 {
+  background-color: #FBD75B;
+  border-color: #FBD75B;
+      display: inline-block;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  margin-right: 5px;
+}
+.cor8 {
+  background-color: #FFB878;
+  border-color: #FFB878;
+      display: inline-block;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  margin-right: 5px;
+}
+.cor9 {
+  background-color: #FF887C;
+  border-color: #FF887C;
+      display: inline-block;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  margin-right: 5px;
+}
+.cor10 {
+  background-color: #DC2127;
+  border-color: #DC2127;
+      display: inline-block;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  margin-right: 5px;
+}
+.cor11 {
+  background-color: #DBADFF;
+  border-color: #DBADFF;
+      display: inline-block;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  margin-right: 5px;
+}
+.cor12 {
+  background-color: #E1E1E1;
+  border-color: #E1E1E1;
+      display: inline-block;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  margin-right: 5px;
+}
+#pickColorIcon {
+    position: absolute;
+    left: -30px;
+    top: 10px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.5em;
+}
+#colorSelectorWrap.showColorBox {
+    width: 1500px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+#colorSelectorWrap {
+    z-index: 999;
+    
+    width: auto;
+    overflow: hidden;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.showColorBox {
+    width: 1500px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+p#createToDoTxt {
+    margin: 10px 0px;
+    font-size: 1.5em;
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    color: #000;
+}
+p#time-title {
+    text-align: left;
+    color: white;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    display: inline;
+}
+#newEventStart {
+    margin: 0 auto;
+    text-align: center;
+    margin: 20px 0px;
+}
+#newEventEnd {
+    margin: 0 auto;
+    text-align: center;
+    margin: 20px 0px;
+}
+#singleDay {
+    margin: 10px 5px;
+    background-color: white;
+    padding: 10px;
+}
+body#theGodlyBody {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+#changeColorButton {
+    margin-left: 25px;
+    display: inline;
+    color: black;
+    padding: 0px 5px;
+    font-size: .7em;
+    border: 0px;
+    background-color: transparent;
+}
+#changeColorButton:hover {
+    color:white;
+    cursor: pointer;
+    border: 1px solid black;
+}
+#pickAColorTxt {
+    font-size: .7em;
+}
+
+p#todocat-txt {
+    margin-left: 10px;
+    color: white;
+}
+
+input[id='rb1'], input[id='rb2'], input[id='rb-event-1'], input[id='rb-event-2'], input[id='rb-event-3'], input[id='rb-event-4'], input[id='rb-event-5'], input[id='rb-event-6'], input[id='rb-event-7'], input[id='rb-selDate'], input[id='rb-selWeek'] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+label#myRadioLabel {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 10px;
+  line-height: 36px;
+  cursor: pointer;
+  border-color: #378237;
+}
+#front {
+  z-index: 999;
+}
+label#myRadioLabel::before {
+  content: " ";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid;
+  border-radius: 4px;
+  z-index: -1;
+  border-color: #378237;
+}
+input[id='rb1'] + label#myRadioLabel::before {
+  border-radius: 18px;
+}
+input[id='rb2'] + label#myRadioLabel::before {
+  border-radius: 18px;
+}
+input[id='rb-event-1'] + label#myRadioLabel::before {
+  border-radius: 18px;
+}
+input[id='rb-event-2'] + label#myRadioLabel::before {
+  border-radius: 18px;
+}
+input[id='rb-event-3'] + label#myRadioLabel::before {
+  border-radius: 18px;
+}
+input[id='rb-event-4'] + label#myRadioLabel::before {
+  border-radius: 18px;
+}
+input[id='rb-event-5'] + label#myRadioLabel::before {
+  border-radius: 18px;
+}
+input[id='rb-event-6'] + label#myRadioLabel::before {
+  border-radius: 18px;
+}
+input[id='rb-event-7'] + label#myRadioLabel::before {
+  border-radius: 18px;
+}
+input[id='rb-selDate'] + label#myRadioLabel::before {
+  border-radius: 18px;
+}
+input[id='rb-selWeek'] + label#myRadioLabel::before {
+  border-radius: 18px;
+}
+/* Checked */
+input[id='rb2']:checked + label#myRadioLabel {
+  padding-left: 10px;
+  color: #fff;
+}
+input[id='rb1']:checked  + label#myRadioLabel {
+  padding-left: 10px;
+  color: #fff;
+}
+
+input[id='rb-event-1']:checked + label#myRadioLabel {
+  padding-left: 10px;
+  color: #fff;
+}
+input[id='rb-event-2']:checked + label#myRadioLabel {
+  padding-left: 10px;
+  color: #fff;
+}
+input[id='rb-event-3']:checked + label#myRadioLabel {
+  padding-left: 10px;
+  color: #fff;
+}
+input[id='rb-event-4']:checked + label#myRadioLabel {
+  padding-left: 10px;
+  color: #fff;
+}
+input[id='rb-event-5']:checked + label#myRadioLabel {
+  padding-left: 10px;
+  color: #fff;
+}
+input[id='rb-event-6']:checked + label#myRadioLabel {
+  padding-left: 10px;
+  color: #fff;
+}
+input[id='rb-event-7']:checked + label#myRadioLabel {
+  padding-left: 10px;
+  color: #fff;
+}
+input[id='rb-selDate']:checked + label#myRadioLabel {
+  padding-left: 10px;
+  color: #fff;
+}
+input[id='rb-selWeek']:checked + label#myRadioLabel {
+  padding-left: 10px;
+  color: #fff;
+}
+input[id='rb1']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+input[id='rb2']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+input[id='rb-event-1']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+input[id='rb-event-2']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+input[id='rb-event-3']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+input[id='rb-event-4']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+input[id='rb-event-5']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+input[id='rb-event-6']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+input[id='rb-event-7']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+input[id='rb-selDate']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+input[id='rb-selWeek']:checked + label#myRadioLabel::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Transition */
+label#myRadioLabel,
+label#myRadioLabel::before {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+p#createToDoTxt-sub {
+    color: black;
+    text-align: left;
+}
+
+
+
+@-webkit-keyframes bounce{
+	0%{transform:scale(1);}
+	50%{transform:scale(1.4);}
+	100%{transform:scale(1);}
+}
+
+@-webkit-keyframes bounce2{
+	0%{transform:scale(1);}
+	50%{transform:scale(0.6);}
+	100%{transform:scale(1);}
+}
+
+@keyframes bounce{
+	0%{transform:scale(1);}
+	50%{transform:scale(1.4);}
+	100%{transform:scale(1);}
+}
+
+@keyframes bounce2{
+	0%{transform:scale(1);}
+	50%{transform:scale(0.6);}
+	100%{transform:scale(1);}
+}
+
+
+#icon_calendar {
+	position: relative;
+	width: 80px;
+	height: 80px;
+    margin-top: 20px;
+	border-radius: 18px;
+	background-color: rgb(240,240,240);
+	box-shadow: 0px 0px 8px rgb(60,60,60);
+	cursor: pointer;
+	color: #F05252;
+	overflow: hidden;
+	transition:all 0.2s;
+    z-index:99;
+}
+
+#icon_calendar:hover {
+	transform:scale(1.1);
+}
+#days_wrap {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 40px;
+	height: 110px;
+	color: #3C3C3C;
+	font-size: 35px;
+	z-index: 3;
+	transition:all 0.2s;
+}
+.daysDP {
+	position: relative;
+	float: left;
+	width: calc(100%/7);
+	height: calc(100%/5);
+	font-size: 12px;
+	text-align: center;
+	transition:all 0.2s;
+	display: none;
+	line-height: 22px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.fleches_mois {
+	position: absolute;
+	cursor: pointer;
+	top: 11px;
+	z-index: 1;
+	display: none;
+	opacity: 1;
+}
+
+
+#fleche_mois1 {
+	left: 5px;
+}
+
+#fleche_mois2 {
+	right: 5px;
+}
+
+#month_wrapDP {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 00px;
+	height: 40px;
+	line-height: 40px;
+	transition:all 0.1s;
+	color: #F05252;
+}
+.mois {
+	position: absolute;
+	margin-left: 230px;
+	width: 80px;
+	height: 100%;
+	top: 0px;
+	line-height: 40px;
+	font-size: 12px;
+	text-align: left;
+	font-family: 'openbold',sans-serif;
+	transition:all 0.2s;
+	opacity: 0.15;
+	display: none;
+}
+#dateandtimebox {
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+}
+#dateandtimebox.showdateandtimebox {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+#dateandtimebox.hidedateandtimebox {
+    display: none;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+.selectEventOccurance {
+    padding: 0px;
+    margin: 20px 10px;
+    text-align: center;
+}
+
+#timeanddaybox {
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+    margin-top: 40px;
+}
+
+#timeanddaybox.showtimeanddatebox {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+#timeanddaybox.hidetimeanddatebox {
+    display: none;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+#dateEventtxt {
+    display: inline;
+    padding: 4px;
+    background-color: #fff;
+    margin-top: 10px;
+
+}
+#weeklyEventtxt {
+    display: inline;
+    padding: 4px;
+    background-color: #fff;
+    margin-top: 10px;
+}
+input#addEventButton {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #F1F1F1;
+    font-size: 1.6em;
+}
+input#addEventButton {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #F1F1F1;
+    font-size: 1.6em;
+}
+input#inlineTP {
+    display: inline;
+}
+.delSiteIco {
+ cursor: pointer; 
+  width: 100%;
+  display: block;
+  margin-bottom: 0px;
+}
+#editSitesIco {
+ cursor: pointer; 
+}
+#delSiteBtn {
+    display: inline;
+    padding: 5px;
+    margin-left: 35%;
+    font-size: 14px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #F1F1F1;
+}
+#event-specificEvent {
+    display: inline;
+    padding: 10px;
+    border-radius: 3px;
+    margin:2px 5px;
+    background-color: #fff;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    border: 2px solid #F1F1F1;
+}
+#event-weeklyEvent {
+    display: inline;
+    padding: 10px;
+    border-radius: 3px;
+    margin:2px 5px;
+    background-color: #fff;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    border: 2px solid #F1F1F1;
+}
+#event-weeklyEvent1 {
+    display: inline;
+    padding: 10px;
+    border-radius: 3px;
+    margin:2px 5px;
+    background-color: #fff;
+    border: 2px solid #F1F1F1;
+}
+#event-specificEvent1{
+    display: inline;
+    padding: 10px;
+    border-radius: 3px;
+    margin:2px 5px;
+    background-color: #fff;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    border: 2px solid #F1F1F1;
+}
+#newEventMo {
+    display: none;
+}
+#newEventDay {
+    display: none;
+}
+#every-event {
+    display: none;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
+    z-index: 1;
+    box-shadow: 5px 5px 5px #888888;
+    color: black;
+}
+#every-event.showAllEvents {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+p#viewAllEventTxt {
+    width: 170px;
+    margin: 0 auto;
+    padding: 5px 0px;
+    text-align: center;
+    margin-top: 10px;
+        -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+p#viewAllEventTxt:hover {
+    cursor: pointer;
+        -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+input.popup-add {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #F1F1F1;
+    font-size: 1.6em;
+}
+input.timepicker2 {
+    margin: 0 auto;
+    text-align: center;
+    padding: 8px;
+}
+input.timepicker3 {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 8px;
+}
+ul#eventtimeul {
+    margin-top: 18px;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+i#closePopUpX {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline;
+    font-size: 1.5em;
+    z-index: 1;
+  cursor: pointer;
+}
+.settingsIcon {
+    margin: 0 auto;
+    text-align: right;
+    font-size: 1.7em;
+}
+
+
+
+/* Code For Pop-Up fade in, in absolute  posistion. A js function is also used to add the .popup class on click */
+.settingsPopUp {
+    visibility: hidden;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: fixed; 
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
+    z-index: 1;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    color: #000;
+
+}
+
+div#settingsWrapper.settingsPopUp.show{
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+#settingsTxt {
+    margin: 10px 0px;
+    font-size: 1.5em;
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    color: #000;
+}
+#settingsIco {
+  cursor: pointer;
+    text-shadow: 1px 1px 1px #000;
+}
+.currentdateandtime {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 25vh;
+}
+.todo-wrapper {
+  height: 65vh;
+  overflow: scroll;
+}
+.todo-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.sites-noIcon {
+  font-family: 'Merriweather', serif;
+  font-size: 22px;
+  font-weight: 300;
+  text-decoration: none;
+  color: #444444;
+
+  border: 2px solid #378237;
+
+  width: auto;
+  text-align: center;
+
+}
+#noIcoSite:hover {
+  text-decoration: none;
+  border: 0px;
+}
+
+.suggestedSites {
+  width: 160px;
+  margin: 0 auto;
+}
+
+.suggestedSite:hover {
+  cursor: pointer;
+}
+
+.suggestedSite {
+    position: relative;
+    display: inline-block;
+    margin: 10px 0px;
+}
+.noScheduled {
+  margin: 20px 40px;
+  padding-top: 40px;
+  display: none;
+  font-size: 14px;
+}
+.noScheduled .show {
+  display: block;
+}
+
+.suggestedSite .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.suggestedSite .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px; 
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+.tttrig {
+  position: relative;
+}
+.suggestedSite:hover .tooltiptext { 
+    visibility: visible;
+}
+.tttrig .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    font-size: 12px;
+    background-color: black; 
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    right: 2px;
+    margin-left: -60px;
+}
+
+.tttrig .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent;
+}
+
+.tttrig:hover .tooltiptext {
+    visibility: visible;
+}
+.usr-notifications {
+  width:30%;
+  margin: 0 auto; 
+  margin-bottom: 8vh; 
+}
+.usr-notifications2 {
+  
+  text-align: center;
+}
+.notification {
+  text-align: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 10px;
+
+  margin: 5px 4px;
+  border-radius: 3px;
+  color: white;
+  opacity: 0.7;
+  background-color: #378237;
+}
+
+.upcomingEvents {
+  width: auto;
+  text-align: left;
+  margin: 0px 50px;
+  color: black;
+}
+.upcomingEvents .date {
+  text-align: left;
+  font-size: 20px;
+  font-family: Asap;
+}
+.upcomingEvents .weeklyEvents {
+  margin-left: 10px;
+}
+ul.eventDetails {
+  padding: 0px;
+  text-align: left;
+  margin: 20px 0px;
+  margin-left: 30px;
+}
+ul.eventDetails li {
+  display: inline;
+  font-size: 13px;
+}
+ul.eventDetails li#title {
+  display: inline;
+  font-size: 15px;
+  font-weight: bold;
+}
+ul.eventDetails li#time {
+  margin-left: 10px;
+}
+.eventViewOptions1 {
+  margin: 0px 40px;
+}
+.eventViewOptions2 {
+  margin: 0px 40px;
+}
+#scheduledEWrap {
+  display: none;
+}
+div#scheduledEWrap.upcomingEvents.show {
+  display: block;
+}
+#weeklyEWrap {
+  display: none;
+}
+div#weeklyEWrap.upcomingWeekly.show {
+  display: block;
+}
+.upcomingWeekly {
+  width: auto;
+  text-align: left;
+  margin: 0px 30px;
+  color: black;
+  height: 350px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.upcomingWeekly::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 8px;
+}
+
+.upcomingWeekly::-webkit-scrollbar-track {
+  background-color: #ecf0f1;
+  border-radius: 8px;
+}
+.weekDay {
+  margin-bottom: 5px;
+}
+.weekDay .day {
+  text-align: left;
+  font-size: 20px;
+  font-family: Asap;
+  padding: 0px;
+  width: 180px;
+  color: black;
+  margin: 0px 10px;
+}
+
+.editonHov:hover .editSite{
+  display:
+}
+p#delSites.cancel:after {
+  content: "Select Sites to delete";
+  font-weight: bold;
+}
+
+p#delSites:after {
+  content: "";
+}
+p#delSites {
+  float: right;
+  color: #000;
+  padding: 0px;
+  font-size: 13px;
+  margin: 0px;
+  margin-right: 15px;
+}
+input[id='dsi'] {
+  display: none;
+}
+
+img.imgIcoDel {
+  width: 30px;
+  height: 30px;
+}
+div.iconFoundSites input[type='checkbox']:checked + img.imgIcoDel{
+  width: 10px;
+  height: 10px;
+}
+div.noiconFoundSites input[type='checkbox']:checked + p.sites-noIcon {
+  font-size: 8px;
+}
+#delSitesForm { 
+  display: none;
+}
+#delSitesForm .show {
+  display: block;
+  position: absolute;
+  float: right;
+}
+#registernsignin {
+  width: 400px;
+  margin: 0 auto;
+}
+#delEvent {
+  display: inline;
+}
+#datepicker {
+    text-align:center;
+    margin: 0 auto;
+}
+.eventEditView {
+  display: none;
+}
+.eventEditView.show {
+  display: block;
+}
+.eventListView.hide {
+  display: none;
+}  
+#setParametersHold {
+  display: inline;
+}
+p#noScheduledMsg {
+  margin: 0 auto;
+  text-align: center;
+  
+}
+#nextBG {
+
+ 
+  color: white;
+  font-size: 30px;
+  z-index: 999;
+  cursor: pointer;
+    text-shadow: 1px 1px 1px #000
+}
+form#signOutF {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center; 
+  padding: 10px 0px;
+}
+div.fw-branding {
+  display: none;
+
+} 
+ul#dateandtime {
+  margin-top: -20px;
+  padding: 0px; 
+}
+ul#dateandtime li{
+  display: inline;
+}
+div#datetimebreak {
+
+ height: 100%; 
+  width: 1px;
+  margin: 0px 30px;
+  padding-top: 7px;
+  border: 2px solid white;
+  display: inline;
+}
+#dashFun1 {
+ margin: 0 auto;
+  text-align: center;
+}
+
+#addToDoIcon {
+  cursor: pointer;
+}
+
+#addSMAccIcon {
+  cursor: pointer;
+}
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%; 
+	height: 100%;
+	z-index: 9999;
+	background: url(../img/gifs/loader2.gif) center no-repeat #fff;
+}
