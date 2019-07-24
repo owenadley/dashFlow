@@ -1,4 +1,7 @@
 # dashFlow
+
+First go at a PHP app.
+
 Personal dashboard website.
 Add your favourite websites, keep track of to-do's, a convienent homepage.
 
